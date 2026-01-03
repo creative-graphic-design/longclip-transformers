@@ -9,9 +9,21 @@ from .configuration_longclip import (
     LongCLIPTextConfig,
     LongCLIPVisionConfig,
 )
+from .modeling_longclip import (
+    LongCLIPModel,
+    LongCLIPTextModel,
+    LongCLIPVisionModel,
+    LongCLIPTextEmbeddings,
+)
+from .processing_longclip import LongCLIPProcessor
 
 __all__ = [
     "LongCLIPConfig",
     "LongCLIPTextConfig",
     "LongCLIPVisionConfig",
+    "LongCLIPModel",
+    "LongCLIPTextModel",
+    "LongCLIPVisionModel",
+    "LongCLIPTextEmbeddings",
+    "LongCLIPProcessor",
 ]
