@@ -34,3 +34,7 @@ tests/fixtures/*.pkl
 
 # Local config
 .python-version
+
+# Model files (download separately)
+longclip-base-hf/
+longclip-large-hf/
