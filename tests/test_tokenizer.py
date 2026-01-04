@@ -7,7 +7,7 @@ import pytest
 import torch
 from transformers import CLIPTokenizer
 
-from model import longclip
+from longclip_original.model import longclip
 
 
 # Sample texts for testing

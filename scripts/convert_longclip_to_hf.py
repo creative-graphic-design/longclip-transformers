@@ -19,7 +19,7 @@ from typing import Dict
 import torch
 import torch.nn as nn
 
-from long_clip_hf import (
+from longclip import (
     LongCLIPConfig,
     LongCLIPModel,
     LongCLIPTextConfig,
@@ -341,7 +341,7 @@ def convert_longclip_checkpoint(
 
     print("Conversion complete!")
     print("\nTo load the model:")
-    print("  from long_clip_hf import LongCLIPModel")
+    print("  from longclip import LongCLIPModel")
     print(f"  model = LongCLIPModel.from_pretrained('{output_path}')")
 
 

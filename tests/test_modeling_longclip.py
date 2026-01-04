@@ -7,7 +7,7 @@ import torch
 from transformers import CLIPTokenizer
 from PIL import Image
 
-from long_clip_hf import (
+from longclip import (
     LongCLIPConfig,
     LongCLIPTextConfig,
     LongCLIPVisionConfig,

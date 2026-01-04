@@ -1,11 +1,12 @@
-import sys
-sys.path.append('..')
-from diffusers import DiffusionPipeline
-import torch
-from open_clip_long import factory as open_clip
-import torch.nn as nn
 import inspect
+import sys
 from typing import Any, Callable, Dict, List, Optional, Tuple, Union
+
+import torch
+import torch.nn as nn
+from diffusers import DiffusionPipeline
+from SDXL_img2img import image2image
+from SDXL_pipeline import get_image
 from transformers import (
     CLIPImageProcessor,
     CLIPTextModel,
@@ -14,11 +15,13 @@ from transformers import (
     CLIPVisionModelWithProjection,
 )
 
-from SDXL_pipeline import get_image
-from SDXL_img2img import image2image
+from longclip_original.open_clip_long import factory as open_clip
 
 base = DiffusionPipeline.from_pretrained(
-    "stabilityai/stable-diffusion-xl-base-1.0", torch_dtype=torch.float16, variant="fp16", use_safetensors=True
+    "stabilityai/stable-diffusion-xl-base-1.0",
+    torch_dtype=torch.float16,
+    variant="fp16",
+    use_safetensors=True,
 )
 base.to("cuda")
 
@@ -45,8 +48,8 @@ image = get_image(
     denoising_end=high_noise_frac,
     output_type="latent",
 ).images
-    
-    
+
+
 image = image2image(
     pipe=refiner,
     prompt=prompt,
@@ -54,6 +57,6 @@ image = image2image(
     denoising_start=high_noise_frac,
     image=image,
 ).images[0]
-    
+
 image_name = "sdxl.png"
 image.save(image_name)
