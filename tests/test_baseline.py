@@ -11,7 +11,7 @@ import pytest
 import torch
 from PIL import Image
 
-from model import longclip
+from longclip_original.model import longclip
 
 
 # Test configuration
