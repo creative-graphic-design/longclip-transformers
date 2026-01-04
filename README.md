@@ -108,8 +108,8 @@ from PIL import Image
 import torch
 
 # Load model and processor from Hub
-model = LongCLIPModel.from_pretrained("BeichenZhang/LongCLIP-B")
-processor = LongCLIPProcessor.from_pretrained("BeichenZhang/LongCLIP-B")
+model = LongCLIPModel.from_pretrained("creative-graphic-design/LongCLIP-B")
+processor = LongCLIPProcessor.from_pretrained("creative-graphic-design/LongCLIP-B")
 
 # Prepare inputs
 image = Image.open("./img/demo.png")
