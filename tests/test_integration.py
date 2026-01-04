@@ -13,7 +13,7 @@ import torch
 from PIL import Image
 from transformers import CLIPImageProcessor, CLIPTokenizer
 
-from long_clip_hf import LongCLIPModel, LongCLIPProcessor
+from longclip import LongCLIPModel, LongCLIPProcessor
 
 # Tolerance for numerical comparison
 # Note: Baseline is stored in float16, so we need slightly looser tolerance

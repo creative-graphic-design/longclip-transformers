@@ -3,7 +3,7 @@ Tests for LongCLIP configuration classes.
 """
 
 import pytest
-from long_clip_hf import LongCLIPConfig, LongCLIPTextConfig, LongCLIPVisionConfig
+from longclip import LongCLIPConfig, LongCLIPTextConfig, LongCLIPVisionConfig
 
 
 class TestLongCLIPTextConfig:

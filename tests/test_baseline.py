@@ -100,7 +100,7 @@ class TestTokenization:
     def test_tokenize_context_length_248(self):
         """Test that context length is 248."""
         long_text = " ".join(["word"] * 300)  # Very long text
-        tokens = longclip.tokenize([long_text])
+        tokens = longclip.tokenize([long_text], truncate=True)
 
         assert tokens.shape[1] == 248
 

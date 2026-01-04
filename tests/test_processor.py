@@ -6,7 +6,7 @@ import pytest
 from PIL import Image
 from transformers import CLIPImageProcessor, CLIPTokenizer
 
-from long_clip_hf import LongCLIPProcessor
+from longclip import LongCLIPProcessor
 
 
 def create_dummy_image(size=(224, 224)):
